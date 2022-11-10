@@ -75,23 +75,23 @@ static const uint qt_meta_data_ProductManagerForm[] = {
        1,    2,   86,    2, 0x06,    1 /* Public */,
        3,    1,   91,    2, 0x06,    4 /* Public */,
        4,    3,   94,    2, 0x06,    6 /* Public */,
-       5,    4,  101,    2, 0x06,   10 /* Public */,
-       6,    1,  110,    2, 0x06,   15 /* Public */,
+       5,    1,  101,    2, 0x06,   10 /* Public */,
+       6,    1,  104,    2, 0x06,   12 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       7,    1,  113,    2, 0x08,   17 /* Private */,
-       8,    0,  116,    2, 0x08,   19 /* Private */,
-       9,    0,  117,    2, 0x08,   20 /* Private */,
-      10,    0,  118,    2, 0x08,   21 /* Private */,
-      11,    0,  119,    2, 0x08,   22 /* Private */,
-      12,    1,  120,    2, 0x08,   23 /* Private */,
-      13,    1,  123,    2, 0x08,   25 /* Private */,
+       7,    1,  107,    2, 0x08,   14 /* Private */,
+       8,    0,  110,    2, 0x08,   16 /* Private */,
+       9,    0,  111,    2, 0x08,   17 /* Private */,
+      10,    0,  112,    2, 0x08,   18 /* Private */,
+      11,    0,  113,    2, 0x08,   19 /* Private */,
+      12,    1,  114,    2, 0x08,   20 /* Private */,
+      13,    1,  117,    2, 0x08,   22 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::QString,    2,    2,
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::QString,    2,    2,    2,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    2,    2,    2,    2,
+    QMetaType::Void, QMetaType::QStringList,    2,
     QMetaType::Void, QMetaType::QString,    2,
 
  // slots: parameters
@@ -100,7 +100,7 @@ static const uint qt_meta_data_ProductManagerForm[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void, QMetaType::QString,    2,
     QMetaType::Void, 0x80000000 | 14,   15,
 
        0        // eod
@@ -115,14 +115,14 @@ void ProductManagerForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 0: _t->productAdd((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 1: _t->productRemove((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 2: _t->productModify((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
-        case 3: _t->productInfo((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
+        case 3: _t->productInfo((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
         case 4: _t->productTotal((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 5: _t->showContextMenu((*reinterpret_cast< std::add_pointer_t<QPoint>>(_a[1]))); break;
         case 6: _t->removeItem(); break;
         case 7: _t->on_addPushButton_clicked(); break;
         case 8: _t->on_modifyPushButton_clicked(); break;
         case 9: _t->on_searchPushButton_clicked(); break;
-        case 10: _t->productData((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: _t->productData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 11: _t->on_productTableView_clicked((*reinterpret_cast< std::add_pointer_t<QModelIndex>>(_a[1]))); break;
         default: ;
         }
@@ -150,7 +150,7 @@ void ProductManagerForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
             }
         }
         {
-            using _t = void (ProductManagerForm::*)(QString , QString , QString , QString );
+            using _t = void (ProductManagerForm::*)(QStringList );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ProductManagerForm::productInfo)) {
                 *result = 3;
                 return;
@@ -173,8 +173,8 @@ const QMetaObject ProductManagerForm::staticMetaObject = { {
     qt_static_metacall,
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_ProductManagerForm_t
-, QtPrivate::TypeAndForceComplete<ProductManagerForm, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>
+, QtPrivate::TypeAndForceComplete<ProductManagerForm, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QStringList, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QPoint &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QString, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>
 
 
 >,
@@ -234,9 +234,9 @@ void ProductManagerForm::productModify(int _t1, int _t2, QString _t3)
 }
 
 // SIGNAL 3
-void ProductManagerForm::productInfo(QString _t1, QString _t2, QString _t3, QString _t4)
+void ProductManagerForm::productInfo(QStringList _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 
